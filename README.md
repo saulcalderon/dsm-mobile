@@ -10,9 +10,9 @@
 
 
 ## Enlaces
-[Tablero de Trello]()
+[Tablero de Trello](https://trello.com/b/7UF4usPN/dsm-ciclo-1-2024)
 
-[Documento PDF]()
+[Documento PDF](https://github.com/saulcalderon/dsm-mobile/blob/main/PROYECTOFASE1DSM.pdf)
 
 ## Licencia
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
