@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AppVeterinariaDSM</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="password">Password</string>
+    <string name="usuario">Usuario</string>
+    <string name="nombreregistro" />
+    <string name="nombre" />
+    <string name="registrarse" />
+</resources>
