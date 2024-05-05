@@ -72,7 +72,7 @@
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeWidth="3dp"
         app:endIconMode="clear_text"
-        app:layout_constraintBottom_toTopOf="@+id/btnIniciarSesion"
+        app:layout_constraintBottom_toTopOf="@+id/btnIniciarSesionS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usuario">
@@ -89,7 +89,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnIniciarSesion"
+        android:id="@+id/btnIniciarSesionS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="500px"

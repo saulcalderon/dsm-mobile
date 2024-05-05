@@ -2,7 +2,6 @@ package com.example.appveterinariadsm
 
 import android.content.Intent
 import android.os.Bundle
-import android.webkit.WebView.FindListener
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
