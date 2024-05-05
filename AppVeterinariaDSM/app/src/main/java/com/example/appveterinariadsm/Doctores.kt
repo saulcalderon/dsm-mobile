@@ -19,28 +19,28 @@ class Doctores : AppCompatActivity() {
             insets
         }
 
-        val buttonND = this.findViewById<Button>(R.id.btnNuevoDoctor)
+        val buttonND = this.findViewById<Button>(R.id.btnNuevoPaciente)
         buttonND.setOnClickListener{
 
-            val intent = Intent(this, RegistroPacientes:: class.java)
+            val intent = Intent(this, RegistroDoctores:: class.java)
             startActivity(intent)
         }
 
-        val buttonPacientes = this.findViewById<Button>(R.id.imageButton)
+        val buttonPacientes = this.findViewById<Button>(R.id.mPacientes)
         buttonPacientes.setOnClickListener{
 
             val intent = Intent(this, Pacientes:: class.java)
             startActivity(intent)
         }
 
-        val buttonDoctores = this.findViewById<Button>(R.id.imageButton2)
+        val buttonDoctores = this.findViewById<Button>(R.id.mDoctores)
         buttonDoctores.setOnClickListener{
 
             val intent = Intent(this, Doctores:: class.java)
             startActivity(intent)
         }
 
-        val buttonLogout = this.findViewById<Button>(R.id.imageButton3)
+        val buttonLogout = this.findViewById<Button>(R.id.mLogout)
         buttonLogout.setOnClickListener{
 
             val intent = Intent(this, MainActivity:: class.java)

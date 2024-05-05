@@ -13,12 +13,12 @@
         android:id="@+id/btnPacientes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:width="300px"
+        android:width="400px"
         android:backgroundTint="#353EE1"
         android:text="Pacientes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193" />
@@ -28,13 +28,13 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:width="300px"
+        android:width="400px"
         android:backgroundTint="#FFFFFF"
         android:text="Citas"
         android:textColor="#353EE1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193"
@@ -42,7 +42,7 @@
         app:strokeWidth="3dp" />
 
     <Button
-        android:id="@+id/btnNuevoDoctor"
+        android:id="@+id/btnNuevoPaciente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="500px"
@@ -77,54 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.532" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:hint="Pacientes"
-        android:contentDescription="Pacientes"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.983"
-        app:srcCompat="@mipmap/huella" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:hint="Doctores"
-        android:contentDescription="Doctores"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.983"
-        app:srcCompat="@mipmap/perfil" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:hint="Salir"
-        android:contentDescription="Salir"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/cerrarsesion" />
 
     <TextView
         android:id="@+id/textView5"
@@ -179,4 +131,48 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.146" />
 
+
+    <Button
+        android:id="@+id/mPacientes"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#ffffff"
+        android:foreground="@mipmap/huella"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+    <Button
+        android:id="@+id/mDoctores"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#ffffff"
+        android:foreground="@mipmap/perfil"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952" />
+
+    <Button
+        android:id="@+id/mLogout"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#ffffff"
+        android:foreground="@mipmap/cerrarsesion"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
 </androidx.constraintlayout.widget.ConstraintLayout>

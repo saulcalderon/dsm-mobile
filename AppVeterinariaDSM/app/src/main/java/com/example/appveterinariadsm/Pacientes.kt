@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.appcompat.widget.AppCompatImageButton
 
 class Pacientes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,33 +22,35 @@ class Pacientes : AppCompatActivity() {
 
 
 
-        val buttonNP = this.findViewById<Button>(R.id.btnNuevoDoctor)
+        val buttonNP = this.findViewById<Button>(R.id.btnNuevoPaciente)
         buttonNP.setOnClickListener{
 
             val intent = Intent(this, RegistroPacientes:: class.java)
             startActivity(intent)
         }
 
-
-        val buttonPacientes = this.findViewById<Button>(R.id.imageButton)
+        val buttonPacientes = this.findViewById<Button>(R.id.mPacientes)
         buttonPacientes.setOnClickListener{
 
             val intent = Intent(this, Pacientes:: class.java)
             startActivity(intent)
         }
 
-        val buttonDoctores = this.findViewById<Button>(R.id.imageButton2)
+        val buttonDoctores = this.findViewById<Button>(R.id.mDoctores)
         buttonDoctores.setOnClickListener{
 
             val intent = Intent(this, Doctores:: class.java)
             startActivity(intent)
         }
 
-        val buttonLogout = this.findViewById<Button>(R.id.imageButton3)
+        val buttonLogout = this.findViewById<Button>(R.id.mLogout)
         buttonLogout.setOnClickListener{
 
             val intent = Intent(this, MainActivity:: class.java)
             startActivity(intent)
         }
+
+
+
     }
 }
