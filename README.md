@@ -5,7 +5,7 @@
 - Caleb Verenice López Gutiérrez - LG211551
 - René Saúl Jovel Calderón - JC211517
 - Bryan Antonio Mena Cortez - MC211787
-- Andrea Giselle Elías Henríquez - EH160454
+- Andrea Gisselle Elías Henríquez - EH160454
 - Miriam Janeth Villeda Lopez - VL191443
 
 
