@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.appcompat.widget.AppCompatImageButton
+import com.example.appveterinariadsm.doctor.Doctores
 
 class Pacientes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
