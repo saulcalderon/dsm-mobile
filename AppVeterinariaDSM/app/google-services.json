@@ -1,22 +1,22 @@
 {
   "project_info": {
-    "project_number": "233769587859",
-    "firebase_url": "https://dsm-proyecto-96e9f-default-rtdb.firebaseio.com",
-    "project_id": "dsm-proyecto-96e9f",
-    "storage_bucket": "dsm-proyecto-96e9f.appspot.com"
+    "project_number": "336454546328",
+    "firebase_url": "https://dsm-proyecto-7098a-default-rtdb.firebaseio.com",
+    "project_id": "dsm-proyecto-7098a",
+    "storage_bucket": "dsm-proyecto-7098a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:233769587859:android:a24e23fa67f40844f9a966",
+        "mobilesdk_app_id": "1:336454546328:android:76d9afe157b7588d0531ed",
         "android_client_info": {
-          "package_name": "dsm.udb_2024"
+          "package_name": "com.example.appveterinariadsm"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCg_feI7cEXN5_5wKAH_afpiwSrDW4hHOc"
+          "current_key": "AIzaSyDhctvUZLZ-qRIvnlQ7yEMOE64BAaTCBug"
         }
       ],
       "services": {

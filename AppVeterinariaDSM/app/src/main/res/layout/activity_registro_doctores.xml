@@ -51,6 +51,7 @@
         app:layout_constraintVertical_bias="0.255">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rd_campo_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -77,6 +78,7 @@
         app:layout_constraintVertical_bias="0.4">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rd_campo_especialidad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -102,6 +104,7 @@
         app:layout_constraintVertical_bias="0.531">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rd_campo_usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -139,7 +142,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnRegistrarPaciente"
+        android:id="@+id/btnRegistrarDoctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="500px"
