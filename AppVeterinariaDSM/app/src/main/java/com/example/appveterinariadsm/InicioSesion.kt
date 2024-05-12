@@ -59,6 +59,6 @@ class InicioSesion : AppCompatActivity() {
                 val dialog = builder.create()
                 dialog.show()
             }
-
+        }
     }
 }
