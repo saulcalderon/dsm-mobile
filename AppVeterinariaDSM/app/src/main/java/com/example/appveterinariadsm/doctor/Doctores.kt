@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -83,7 +84,16 @@ class Doctores : AppCompatActivity() {
                        Log.d("Doctores", "Doctor fetched: ${it.nombre}, ${it.especialidad}, ${it.usuario}")
                    }
                }
-               val adapter = DoctorAdapter(doctorsList)
+               val adapter = DoctorAdapter(doctorsList, object : DoctorAdapter.DoctorInteractionListener {
+                //    override fun onViewInfo(doctor: Doctor) {
+                //        Log.d("Doctores", "View info: ${doctor.nombre}")
+                //    }
+                   override fun onDeleteDoctor(doctor: Doctor) {
+                          Log.d("Doctores", "Delete doctor: ${doctor.usuario}")
+                            myRef.child(doctor.usuario!!).removeValue()
+                            Toast.makeText(this@Doctores, "Doctor eliminado correctamente", Toast.LENGTH_SHORT).show()
+                   }
+               })
                recyclerView.adapter = adapter
            }
 

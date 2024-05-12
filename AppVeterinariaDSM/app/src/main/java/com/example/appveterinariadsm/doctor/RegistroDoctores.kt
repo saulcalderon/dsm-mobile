@@ -31,23 +31,23 @@ class RegistroDoctores : AppCompatActivity() {
         //  Start - Menu
 
         val buttonPacientes = this.findViewById<Button>(R.id.mPacientes)
-        buttonPacientes.setOnClickListener{
+        buttonPacientes.setOnClickListener {
 
-            val intent = Intent(this, Pacientes:: class.java)
+            val intent = Intent(this, Pacientes::class.java)
             startActivity(intent)
         }
 
         val buttonDoctores = this.findViewById<Button>(R.id.mDoctores)
-        buttonDoctores.setOnClickListener{
+        buttonDoctores.setOnClickListener {
 
-            val intent = Intent(this, Doctores:: class.java)
+            val intent = Intent(this, Doctores::class.java)
             startActivity(intent)
         }
 
         val buttonLogout = this.findViewById<Button>(R.id.mLogout)
-        buttonLogout.setOnClickListener{
+        buttonLogout.setOnClickListener {
 
-            val intent = Intent(this, MainActivity:: class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
