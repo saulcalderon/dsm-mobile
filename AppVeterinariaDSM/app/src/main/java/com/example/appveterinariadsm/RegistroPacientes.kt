@@ -13,10 +13,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-
 class RegistroPacientes : AppCompatActivity() {
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
