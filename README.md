@@ -14,7 +14,8 @@
 
 [Documento PDF](https://github.com/saulcalderon/dsm-mobile/blob/main/PROYECTOFASE1DSM.pdf)
 
-[Manual de usuario](https://drive.google.com/file/d/1xsn2Yec3eGbR1m1yOp4ZCls86hMmyUVg/view?usp=drive_link)
+[Manual de usuario](https://drive.google.com/file/d/1sSXOB1dvGLqkE48aa2S7bGwl_JqCOe03/view?usp=drive_link)
+[Manual del Programador](https://drive.google.com/file/d/1jBKlfxgSOaZE9Rf5JtHEuR-3wvNbVWuG/view?usp=drive_link)
 
 [Enlace video demostración](https://drive.google.com/file/d/1Z9gqgIff3i9U7Ad-ywKOEWLbuTWe3M91/view?usp=sharing)
 
