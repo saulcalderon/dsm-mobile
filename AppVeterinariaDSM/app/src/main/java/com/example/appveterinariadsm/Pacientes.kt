@@ -2,14 +2,30 @@ package com.example.appveterinariadsm
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.appcompat.widget.AppCompatImageButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.Firebase
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.database
 
 class Pacientes : AppCompatActivity() {
+
+    data class Paciente(
+        val nombrePaciente: String? = null,
+        val dueno: String? = null,
+        val especie: String? = null
+    )
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,92 +36,73 @@ class Pacientes : AppCompatActivity() {
             insets
         }
 
-        // Inicializar la base de datos Firebase
-//        database = FirebaseDatabase.getInstance().reference.child("pacientes")
-//        pacientesList = mutableListOf()
-//
-//        // Configurar el botón "Guardar"
-//        btnGuardar.setOnClickListener {
-//            guardarPacienteEnFirebase(
-//                etNombre.text.toString(),
-//                etEspecie.text.toString(),
-//                etRaza.text.toString(),
-//                etEdad.text.toString()
-//            )
-//            limpiarCampos()
-//        }
 
-        // Configurar el botón "Ver"
-//        btnVer.setOnClickListener {
-//            mostrarPacientes()
-//        }
-//
-//        // Escuchar cambios en la base de datos Firebase
-//        database.addValueEventListener(object : ValueEventListener {
-//            fun onDataChange(snapshot: DataSnapshot) {
-//                pacientesList.clear()
-//                for (data in snapshot.children) {
-//                    val paciente = data.getValue(Paciente::class.java)
-//                    paciente?.let { pacientesList.add(it) }
-//                }
-//            }
-//        }
+        val buttonNP = this.findViewById<Button>(R.id.btnNuevoPaciente)
+        buttonNP.setOnClickListener {
 
-            val buttonNP = this.findViewById<Button>(R.id.btnNuevoPaciente)
-        buttonNP.setOnClickListener{
-
-            val intent = Intent(this, RegistroPacientes:: class.java)
+            val intent = Intent(this, RegistroPacientes::class.java)
             startActivity(intent)
         }
 
         val buttonPacientes = this.findViewById<Button>(R.id.mPacientes)
-        buttonPacientes.setOnClickListener{
+        buttonPacientes.setOnClickListener {
 
-            val intent = Intent(this, Pacientes:: class.java)
+            val intent = Intent(this, Pacientes::class.java)
             startActivity(intent)
         }
 
         val buttonDoctores = this.findViewById<Button>(R.id.mDoctores)
-        buttonDoctores.setOnClickListener{
+        buttonDoctores.setOnClickListener {
 
-            val intent = Intent(this, Doctores:: class.java)
+            val intent = Intent(this, Doctores::class.java)
             startActivity(intent)
         }
 
         val buttonLogout = this.findViewById<Button>(R.id.mLogout)
-        buttonLogout.setOnClickListener{
+        buttonLogout.setOnClickListener {
 
-            val intent = Intent(this, MainActivity:: class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        val recyclerView = this.findViewById<RecyclerView>(R.id.rvPacientes)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        fetchPacientesFromFirebase(recyclerView)
     }
-//    private fun guardarPacienteEnFirebase(nombre: String, especie: String, raza: String, edad: String) {
-//        val pacienteId = database.push().key
-//        val paciente = Paciente(nombre, especie, raza, edad)
-//        pacienteId?.let {
-//            database.child(it).setValue(paciente)
-//        }
-//    }
-//    private fun limpiarCampos() {
-//        etNombre.text.clear()
-//        etEspecie.text.clear()
-//        etRaza.text.clear()
-//        etEdad.text.clear()
-//    }
-//    private fun mostrarPacientes() {
-//        val stringBuilder = StringBuilder()
-//        for (paciente in pacientesList) {
-//            stringBuilder.append("Nombre: ${paciente.nombre}\n")
-//            stringBuilder.append("Especie: ${paciente.especie}\n")
-//            stringBuilder.append("Raza: ${paciente.raza}\n")
-//            stringBuilder.append("Edad: ${paciente.edad}\n\n")
-//        }
-//        tvInformacionPaciente.text = stringBuilder.toString()
-//    }
+
+
+
+    private fun fetchPacientesFromFirebase(recyclerView: RecyclerView) {
+        val pacientesList = mutableListOf<Paciente>()
+        val database = Firebase.database
+        val myRef = database.getReference("pacientes")
+
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                pacientesList.clear()
+                for (postSnapshot in snapshot.children) {
+                    val paciente = postSnapshot.getValue(Paciente::class.java)
+                    paciente?.let {
+                        pacientesList.add(it)
+                        Log.d("Pacientes", "Paciente fetched: ${it.nombrePaciente}, ${it.dueno}, ${it.especie}")
+                    }
+                }
+                val adapter = PacienteAdapter(pacientesList, object : PacienteAdapter.PacienteInteractionListener {
+                    //    override fun onViewInfo(doctor: Doctor) {
+                    //        Log.d("Paci", "View info: ${doctor.nombre}")
+                    //    }
+                    override fun onDeletePaciente(paciente: Paciente) {
+
+                        Log.d("Paciente", "Delete paciente: ${paciente.nombrePaciente}")
+                        myRef.child(paciente.nombrePaciente!!).removeValue()
+                        Toast.makeText(this@Pacientes, "Paciente eliminado correctamente", Toast.LENGTH_SHORT).show()
+                    }
+                })
+                recyclerView.adapter = adapter
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("Pacientes", "Failed to read doctor values.", databaseError.toException())
+            }
+        })
+    }
 }
-data class Paciente(
-    val nombre: String = "",
-    val especie: String = "",
-    val raza: String = "",
-    val edad: String = ""
-)

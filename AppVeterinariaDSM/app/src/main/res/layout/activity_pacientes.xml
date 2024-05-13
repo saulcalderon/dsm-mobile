@@ -68,7 +68,7 @@
         app:srcCompat="@drawable/splashscreen" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDoctores"
+        android:id="@+id/rvPacientes"
         android:layout_width="361dp"
         android:layout_height="393dp"
         app:layout_constraintBottom_toBottomOf="parent"
