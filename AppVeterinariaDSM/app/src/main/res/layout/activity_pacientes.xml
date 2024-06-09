@@ -14,7 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="400px"
-        android:backgroundTint="#353EE1"
         android:text="Pacientes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,21 +24,17 @@
 
     <Button
         android:id="@+id/btnCitas"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="400px"
-        android:backgroundTint="#FFFFFF"
         android:text="Citas"
-        android:textColor="#353EE1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193"
-        app:strokeColor="#353EE1"
-        app:strokeWidth="3dp" />
+    />
 
     <Button
         android:id="@+id/btnNuevoPaciente"
@@ -47,7 +42,6 @@
         android:layout_height="wrap_content"
         android:width="500px"
         android:backgroundTint="#353EE1"
-        android:text="Registrar nuevo paciente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
