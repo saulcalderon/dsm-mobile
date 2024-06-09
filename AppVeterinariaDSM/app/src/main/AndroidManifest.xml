@@ -21,10 +21,10 @@
         <activity
             android:name=".doctor.Doctores"
             android:exported="false" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+<!--        <activity-->
+<!--            android:name=".ui.login.LoginActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_login" />-->
         <activity
             android:name=".Pacientes"
             android:exported="false" />
@@ -33,6 +33,9 @@
             android:exported="false" />
         <activity
             android:name=".InicioSesion"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroCitas"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
