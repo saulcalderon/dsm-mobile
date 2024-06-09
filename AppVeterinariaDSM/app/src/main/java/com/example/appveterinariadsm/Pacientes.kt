@@ -167,7 +167,6 @@ class Pacientes : AppCompatActivity() {
                 }
                 val adapter = CitaAdapter(citasList, object : CitaAdapter.CitaInteractionListener {
                     override fun onDeleteCita(cita: Cita) {
-
                        Log.d("Cita", "Delete cita: ${cita}")
                        myRef.child(cita.nombrePaciente!!).removeValue()
                        Toast.makeText(this@Pacientes, "Cita eliminada correctamente", Toast.LENGTH_SHORT).show()

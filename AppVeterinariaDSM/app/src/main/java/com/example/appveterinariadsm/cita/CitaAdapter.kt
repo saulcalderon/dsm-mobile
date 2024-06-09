@@ -3,6 +3,7 @@ package com.example.appveterinariadsm.cita
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appveterinariadsm.Pacientes
@@ -18,7 +19,7 @@ class CitaAdapter(private val citas: List<Pacientes.Cita>, private val listener:
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val citaTextView: TextView = itemView.findViewById(R.id.view_paciente_nombrePaciente)
         val fechaTextView: TextView = itemView.findViewById(R.id.fecha)
-        // val btnBorrarCita: Button = itemView.findViewById(R.id.btnBorrarCita)
+         val btnBorrarCita: Button = itemView.findViewById(R.id.btnBorrarPaciente)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,7 +32,7 @@ class CitaAdapter(private val citas: List<Pacientes.Cita>, private val listener:
         val currentCita = citas[position]
         holder.citaTextView.text = currentCita.nombrePaciente
         holder.fechaTextView.text = currentCita.fechaHora
-        // holder.btnBorrarCita.setOnClickListener{ listener.onDeleteCita(currentCita) }
+        holder.btnBorrarCita.setOnClickListener{ listener.onDeleteCita(currentCita) }
     }
 
     override fun getItemCount(): Int = citas.size
