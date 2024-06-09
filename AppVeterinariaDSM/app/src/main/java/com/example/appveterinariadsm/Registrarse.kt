@@ -16,6 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.tasks.Task
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
@@ -46,6 +47,32 @@ class Registrarse : AppCompatActivity() {
         buttonG.setOnClickListener{
             val signInIntent = googleSignInClient.signInIntent
             launcher.launch(signInIntent)
+        }
+
+        val button = this.findViewById<Button>(R.id.btnRegistrarse)
+        button.setOnClickListener{
+            val emailEditText = findViewById<TextInputEditText>(R.id.etUsuarioRegistroDoctor)
+            val passwordEditText = findViewById<TextInputEditText>(R.id.etPasswordRegistroDoctor)
+   
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
+
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val user = auth.currentUser
+                        val intent = Intent(this, Pacientes::class.java)
+                        Log.d("InicioSesion", "User: ${user?.displayName}, ${user?.email}")
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
+                    }
+                }
         }
     }
 
