@@ -14,9 +14,9 @@
 
 [Documento PDF](https://github.com/saulcalderon/dsm-mobile/blob/main/PROYECTOFASE1DSM.pdf)
 
-[Manual de usuario](https://udbedu-my.sharepoint.com/:b:/g/personal/lg211551_alumno_udb_edu_sv/EW8p11HvfoBPgmJ8Fw1IHmQBUoEUe-AAn7vkwcgZjkVD2g?e=TKPT5c)
+[Manual de usuario](https://udbedu-my.sharepoint.com/:b:/g/personal/lg211551_alumno_udb_edu_sv/EVUDpHgUKLhIoMivN9kL4xEBi0A4XqTkKlhL5HOTJUOxfg?e=MnrguG)
 
-[Manual del Programador](https://udbedu-my.sharepoint.com/:b:/g/personal/lg211551_alumno_udb_edu_sv/EYjuFBsiM25FppItaU1d6MYBGD09xWxn-4mXp8xkJ9bLYg?e=JcAceS)
+[Manual del Programador](https://udbedu-my.sharepoint.com/:b:/g/personal/lg211551_alumno_udb_edu_sv/EYLCn2ZGdbhDogTO2qTUzewBhuZg4TVQHCoEeIRP9YIEtg?e=E6ezLo)
 
 [Enlace video demostración](https://drive.google.com/file/d/1Z9gqgIff3i9U7Ad-ywKOEWLbuTWe3M91/view?usp=sharing)
 
