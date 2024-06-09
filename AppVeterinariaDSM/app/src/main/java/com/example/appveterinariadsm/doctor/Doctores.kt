@@ -60,6 +60,7 @@ class Doctores : AppCompatActivity() {
         buttonLogout.setOnClickListener{
 
             val intent = Intent(this, MainActivity:: class.java)
+            AuthenticationHelper.logout(this)
             startActivity(intent)
         }
         // End - Menu
