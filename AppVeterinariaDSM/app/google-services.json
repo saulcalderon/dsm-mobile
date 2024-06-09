@@ -13,7 +13,20 @@
           "package_name": "com.example.appveterinariadsm"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "233769587859-eleuo8ldne7sve0vpi0i5gd1unhkpcpp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appveterinariadsm",
+            "certificate_hash": "14eec713c3388531444ccee6cb028e18929ed60b"
+          }
+        },
+        {
+          "client_id": "233769587859-cn3bdh26875rdebboemcct0d0g58gp03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCg_feI7cEXN5_5wKAH_afpiwSrDW4hHOc"
@@ -21,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233769587859-cn3bdh26875rdebboemcct0d0g58gp03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

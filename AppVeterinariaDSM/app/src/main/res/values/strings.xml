@@ -21,4 +21,6 @@
     <string name="nombrePacienteText">Nombre</string>
     <string name="especiePacienteText">Especie</string>
     <string name="duenoPacienteText">Dueño</string>
+    <string name="default_web_client_id">233769587859-eleuo8ldne7sve0vpi0i5gd1unhkpcpp.apps.googleusercontent.com</string>
+
 </resources>

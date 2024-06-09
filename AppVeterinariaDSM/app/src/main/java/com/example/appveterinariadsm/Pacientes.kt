@@ -12,7 +12,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appveterinariadsm.doctor.Doctores
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -63,6 +66,7 @@ class Pacientes : AppCompatActivity() {
         buttonLogout.setOnClickListener {
 
             val intent = Intent(this, MainActivity::class.java)
+            AuthenticationHelper.logout(this)
             startActivity(intent)
         }
         val recyclerView = this.findViewById<RecyclerView>(R.id.rvPacientes)
