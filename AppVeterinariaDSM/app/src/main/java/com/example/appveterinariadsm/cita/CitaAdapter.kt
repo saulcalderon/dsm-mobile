@@ -30,7 +30,7 @@ class CitaAdapter(private val citas: List<Pacientes.Cita>, private val listener:
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentCita = citas[position]
         holder.citaTextView.text = currentCita.nombrePaciente
-        holder.fechaTextView.text = currentCita.fecha
+        holder.fechaTextView.text = currentCita.fechaHora
         // holder.btnBorrarCita.setOnClickListener{ listener.onDeleteCita(currentCita) }
     }
 

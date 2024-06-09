@@ -14,10 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appveterinariadsm.cita.CitaAdapter
 import com.example.appveterinariadsm.doctor.Doctores
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -31,7 +28,7 @@ class Pacientes : AppCompatActivity() {
         val especie: String? = null
     )
 
-    data class Cita(val fecha: String? = null, val hora: String? = null, val nombrePaciente: String? = null)
+    data class Cita(val fechaHora: String? = null, val nombrePaciente: String? = null)
 
     private var seleccionado = "Pacientes"
 
@@ -59,8 +56,8 @@ class Pacientes : AppCompatActivity() {
                 val intent = Intent(this, RegistroPacientes::class.java)
                 startActivity(intent)
             } else {
-                // val intent = Intent(this, RegistroCitas::class.java)
-                // startActivity(intent)
+                 val intent = Intent(this, RegistroCitas::class.java)
+                 startActivity(intent)
             }
         }
 
@@ -165,7 +162,7 @@ class Pacientes : AppCompatActivity() {
                     val cita = postSnapshot.getValue(Cita::class.java)
                     cita?.let {
                         citasList.add(it)
-                        Log.d("Citas", "Cita fetched: ${it.fecha}, ${it.hora}")
+                        Log.d("Citas", "Cita fetched: ${it.fechaHora}")
                     }
                 }
                 val adapter = CitaAdapter(citasList, object : CitaAdapter.CitaInteractionListener {
